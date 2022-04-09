@@ -74,7 +74,7 @@ public class BoardSerivceImpl implements BoardService{
     @Override
     public void modify(BoardDTO boardDTO) {
 
-        Board board = boardRepository.getOne(boardDTO.getBno());
+        Board board = boardRepository.getById(boardDTO.getBno());
 
         board.changeContent(boardDTO.getContent());
         board.changeTitle(boardDTO.getTitle());
